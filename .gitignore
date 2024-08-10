@@ -1,0 +1,2 @@
+touch .gitignore
+nano .gitignore  # You can use any text editor

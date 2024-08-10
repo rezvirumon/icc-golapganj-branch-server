@@ -1,3 +1,4 @@
+// models/ConnectionRequest.js
 const mongoose = require('mongoose');
 
 const connectionRequestSchema = new mongoose.Schema({
@@ -7,8 +8,10 @@ const connectionRequestSchema = new mongoose.Schema({
   unionName: String,
   message: String,
   packageName: String,
+  status: {
+    type: String,
+    default: 'Pending',
+  },
 });
 
-const ConnectionRequest = mongoose.model('ConnectionRequest', connectionRequestSchema);
-
-module.exports = ConnectionRequest;
+module.exports = mongoose.model('ConnectionRequest', connectionRequestSchema);
